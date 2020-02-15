@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const memoryController = require("../../controllers/memoryController");
 
-// Matches with "/api/user/:id/memory"
+// Matches with "/api/memory
 router.route("/")
 .get(memoryController.findAll)
 .post(memoryController.create)

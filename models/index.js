@@ -1,2 +1,1 @@
-module.exports = { User: require("./user")};
-module.exports = { Memory: require("./memory") };
+module.exports = { User: require("./user"), Memory: require("./memory")};

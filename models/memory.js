@@ -2,8 +2,6 @@ const mongoose = require ("mongoose");
 const Schema = mongoose.Schema;
 
 const memorySchema = new Schema({
-    Id: { type: String,
-        required: true },
     title: { type: String,
         required: true },
     main_content: { type: String,
