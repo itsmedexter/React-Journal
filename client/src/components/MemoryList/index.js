@@ -25,19 +25,19 @@ useEffect(() => {
 
 return (
     <div>
-        <h2>List of All Memories</h2>
+        <h3>List of All Memories</h3>
         {state.memory.length ? (
             <List>
                 {state.memory.map(memory => (
                     <ListItem key={memory._id}>
                         <strong>
-                            {memory.body}
+                            {memory._id + memory.body}
                         </strong>
                     </ListItem>
                 ))}
             </List>
         ) : (
-            <h4>You haven't added any memories!</h4>
+            <h4>Add some memories!</h4>
         )}
     </div>
 );

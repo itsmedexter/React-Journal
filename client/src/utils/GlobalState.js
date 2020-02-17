@@ -12,7 +12,21 @@ const { Provider } = StoreContext;
 
 const reducer = (state, action) => {
     switch (action.type) {
-    case UPDATE_USER:
+    case ADD_MEMORY:
+        return {
+            ...state,
+            memory: [...action.post, ...state.memory],
+            loading: false
+        };
+
+    case UPDATE_MEMORY:
+        return {
+            ...state,
+            memory: [...action.memory],
+            loading: false
+        };
+
+        case UPDATE_USER:
         return {
             ...state,
             user: [...action.user],
@@ -21,21 +35,7 @@ const reducer = (state, action) => {
     case ADD_USER:
         return {
             ...state,
-            user: [...action.user, ...state.user],
-            loading: false
-        };
-
-    case ADD_MEMORY:
-        return {
-            ...state,
-            memory: [...action.memory, ...state.memory],
-            loading: false
-        };
-
-    case UPDATE_MEMORY:
-        return {
-            ...state,
-            memory: [...action.memory],
+            user: [...action.post, ...state.user],
             loading: false
         };
 

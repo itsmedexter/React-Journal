@@ -5,12 +5,10 @@ import MemoryList from "../components/MemoryList";
 
 const Home = () => {
     return (
-        <Container fluid>
+        <Container>
             <Row>
-                <Col size="md-6">
+                <Col size="md-4">
                     <CreateMemoryForm />
-                </Col>
-                <Col size="md-6 sm-12">
                     <MemoryList />
                 </Col>
             </Row>

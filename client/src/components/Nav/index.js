@@ -1,13 +1,13 @@
 import React from "react";
-import { useStoreContex } from "../../utils/GlobalState";
+import { useStoreContext } from "../../utils/GlobalState";
 
 function Nav() {
-    const [store] = useStoreContex();
+    const [store] = useStoreContext();
 
     return(
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-info">
             <a className="navbar-brand" href="/">
-                A drift on Memory Bliss
+                ReMemory
             </a>
             {store.loading ? <a className="navbar-brand ml-auto">Loading...</a> : <></>}
         </nav>

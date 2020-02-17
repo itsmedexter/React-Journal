@@ -16,7 +16,7 @@ function CreateMemoryForm() {
         .then(result => {
             dispatch({
                 type:ADD_MEMORY,
-                memory: result.data
+                post: result.data
             });
         })
         .catch(err => console.log(err));
@@ -26,10 +26,10 @@ function CreateMemoryForm() {
 
     return (
         <div>
-            <h2>Jott down your Memory</h2>
-            <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
-                <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
-                <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit"> Save Memory</button>
+            <h3>Jot down a memory!</h3>
+            <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
+                <textarea className="form-control mb-2" required ref={bodyRef} placeholder="50 Characters or Less" rows="3" />
+                <button className="btn btn-info mt-2 mb-5" disabled={state.loading} type="submit">Save Memory</button>
             </form>
         </div>
     );

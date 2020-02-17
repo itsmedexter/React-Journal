@@ -15,12 +15,12 @@ function Signup()
      return (
          <div>
              <div className="mt-4">
-                 <h3>Sign Up</h3>
+                 <h3>Sign In</h3>
              </div>
              <form onSubmit={handleSubmit}>
                  <Container className="mt-3 px-5">
                      <Row className="mt-3 px-5">
-                         <Col size="5">
+                         <Col size="3">
                              <input
                              className="form-control"
                              type="text"
@@ -32,7 +32,7 @@ function Signup()
                          </Col>
                      </Row>
                      <Row className="form-group">
-                         <Col size="5">
+                         <Col size="3">
                              <input
                              className="form-control"
                              type="password"
@@ -43,11 +43,13 @@ function Signup()
                              />
                          </Col>
                      </Row>
-                     <button className="btn btn-success" type="submit">Submit</button>
+                     <button className="btn btn-success" type="submit">Enter</button><br />
+                     <button className="btn btn-secondary mt-2" type="submit">Create New User</button>
+
                  </Container>
                  <Container className="mt-4">
-                     <h3>Username Test: {username}</h3>
-                     <h3>Password Test: {password}</h3>
+                     <h5>Username Test: {username}</h5>
+                     <h5>Password Test: {password}</h5>
                  </Container>
                  
              </form>
