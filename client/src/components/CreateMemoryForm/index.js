@@ -2,8 +2,9 @@ import React, { useRef, useState } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_MEMORY, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
+import "./index.css";
 
-const tagsConfigInitialState = [{value: false, name: 'happy', label:'Happy'}, {value: false, name: 'sad', label:'Sad'}]
+const tagsConfigInitialState = [{value: false, name: 'happy', label:'Happy'}, {value: false, name: 'funny', label:'Funny'}, {value: false, name: 'silly', label:'Silly'}, {value: false, name: 'terrible', label:'Terrible'}, {value: false, name: 'scary', label:'Scary'}]
 
 function CreateMemoryForm() {
     const [tagsConfig, setTagsConfig] = useState(tagsConfigInitialState);
@@ -48,8 +49,8 @@ function CreateMemoryForm() {
             <h3>Jot down a memory!</h3>
             <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
                 <textarea className="form-control mb-2" required ref={bodyRef} placeholder="50 Characters or Less" rows="3" />
-                <div className="tag-container">
-                    <h3>Tags</h3>
+                <div className="tag-container checkBox">
+                    <h4>Add a Tags</h4>
                     {tagsConfig.map(tag => {
                         return (
                             <>
