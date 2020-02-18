@@ -15,12 +15,12 @@ function Signup()
      return (
          <div>
              <div className="mt-4">
-                 <h3>Sign In</h3>
+                 <h4>Sign In</h4>
              </div>
              <form onSubmit={handleSubmit}>
                  <Container className="mt-3 px-5">
                      <Row className="mt-3 px-5">
-                         <Col size="3">
+                         <Col size="md-2">
                              <input
                              className="form-control"
                              type="text"
@@ -32,7 +32,7 @@ function Signup()
                          </Col>
                      </Row>
                      <Row className="form-group">
-                         <Col size="3">
+                         <Col size="md-2">
                              <input
                              className="form-control"
                              type="password"

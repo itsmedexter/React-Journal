@@ -31,8 +31,9 @@ return (
                 {state.memory.map(memory => (
                     <ListItem key={memory._id}>
                         <strong>
-                            {memory._id + memory.body}
+                            {memory._id + memory.main_content}
                         </strong>
+                        {memory.tag}
                     </ListItem>
                 ))}
             </List>
@@ -44,3 +45,15 @@ return (
 }
 
 export default MemoryList;
+
+
+
+// {state.memory.map(memory => {
+//     if(memory.tag.split(', ').indexOf('Sad') > -1) {
+//    return (
+//     <ListItem key={memory._id}>
+//         <strong>
+//             {memory._id + memory.main_content}
+//         </strong>
+//         {memory.tag}
+//     </ListItem>

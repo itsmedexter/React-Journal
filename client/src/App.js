@@ -1,6 +1,6 @@
 import React from "react";
-import Signup from "./pages/Signup";
-// import Home from "./pages/Home";
+// import Signup from "./pages/Signup";
+import Home from "./pages/Home";
 import "./App.css";
 import { StoreProvider } from "./utils/GlobalState";
 import Nav from "./components/Nav";
@@ -11,7 +11,7 @@ function App() {
         <StoreProvider>
           <Nav />
           <div className="App">
-            <Signup />
+            <Home />
           </div>
         </StoreProvider>
       </div>

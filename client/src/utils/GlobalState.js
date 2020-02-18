@@ -15,7 +15,7 @@ const reducer = (state, action) => {
     case ADD_MEMORY:
         return {
             ...state,
-            memory: [...action.post, ...state.memory],
+            memory: [...state.memory, action.post],
             loading: false
         };
 
