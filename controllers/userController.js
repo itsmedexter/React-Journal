@@ -1,6 +1,12 @@
 const db = require("../models");
 
 module.exports = {
+    login: function(req, res) {
+        // handle user login
+        db.User.find(req.body)
+        .catch(err => res.status (400).json(err));
+    },
+
     findAll: function(req, res) {
         db.User.find(req.query)
         .sort({ date: -1 })

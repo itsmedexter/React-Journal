@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Col, Row, Container } from "../components/Grid";
+import API from "../utils/API";
+// import Home from "./Home";
+
 
 function Signup()
  {
@@ -8,6 +11,17 @@ function Signup()
 
      const handleSubmit = e => {
          e.preventDefault();
+         let data = {
+             email: username,
+             password: password
+         };
+
+         API.saveUser(data) .then(results => {
+             console.log(results);
+             // what to do after user is created? 
+window.location.replace("/home")
+         })
+    
          console.log("username is " + username);
          console.log("password is " + password);
      };

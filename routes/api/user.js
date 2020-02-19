@@ -8,6 +8,9 @@ router.route("/")
 .get(userController.findAll)
 .post(userController.create)
 
+router.route("/login")
+.put(userController.login)
+
 router.route("/:id")
 .get(userController.findById)
 

@@ -10,6 +10,8 @@ const memorySchema = new Schema({
 });
 
 // Id, title, main content, tag, user Id (forien id key), association mongo????
+// Do a one to one relationship with user schema, (association mongo).
+// https://docs.mongodb.com/manual/tutorial/model-embedded-one-to-one-relationships-between-documents/
 
 const Memory = mongoose.model ("Memory", memorySchema);
 
