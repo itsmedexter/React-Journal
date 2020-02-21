@@ -2,8 +2,8 @@ import React from "react";
 
 function Input(props) {
     return (
-        <div className="input-group input-group-lg">
-            <input className="form-control" type="text" onChange={props.onchange} />
+        <div className="form-group mt-3 mb-3">
+            <input className="form-control" type="text" onChange={props.onchange} placeholder="Search by Tag" />
         </div>
     );
 }

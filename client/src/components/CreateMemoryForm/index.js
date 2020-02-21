@@ -22,7 +22,7 @@ function CreateMemoryForm() {
         API.saveMemory({
             main_content,
             tag
-        })
+                })
         .then(result => {
             dispatch({
                 type:ADD_MEMORY,

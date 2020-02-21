@@ -72,3 +72,10 @@ window.location.replace("/home")
  };
 
  export default Signup;
+
+
+
+
+//  user logs in capture user's ID (global variable)
+// later when user creates memory, memory get added to the database with user's id
+// find user and memory by global variable

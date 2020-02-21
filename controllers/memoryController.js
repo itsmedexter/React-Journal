@@ -16,5 +16,15 @@ module.exports = {
         db.Memory.create(req.body)
         .then(dbMemory => res.json(dbMemory))
         .catch(err => res.status(400).json(err));
+    },
+    findOne: function() {
+        db.Memory.aggregate([
+            {
+                $lookup:
+                {
+                    from: "User"
+                }
+            }
+        ])
     }
 };
