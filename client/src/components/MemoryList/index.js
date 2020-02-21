@@ -3,6 +3,7 @@ import { ListItem, List } from "../List";
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_MEMORY, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
+import SearchMemory from "../SearchMemory";
 
 function MemoryList() {
     const [state, dispatch] = useStoreContext();
@@ -23,9 +24,12 @@ useEffect(() => {
     getMemory();
 }, []);
 
+
+
 return (
     <div>
         <h3>List of All Memories</h3>
+        <SearchMemory/>
         {state.memory.length ? (
             <List>
                 {state.memory.map(memory => (

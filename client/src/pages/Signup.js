@@ -22,8 +22,8 @@ function Signup()
 window.location.replace("/home")
          })
     
-         console.log("username is " + username);
-         console.log("password is " + password);
+        //  console.log("username is " + username);
+        //  console.log("password is " + password);
      };
 
      return (
@@ -58,13 +58,13 @@ window.location.replace("/home")
                          </Col>
                      </Row>
                      <button className="btn btn-success" type="submit">Enter</button><br />
-                     <button className="btn btn-secondary mt-2" type="submit">Create New User</button>
+                     {/* <button className="btn btn-secondary mt-2" type="submit">Create New User</button> */}
 
                  </Container>
-                 <Container className="mt-4">
+                 {/* <Container className="mt-4">
                      <h5>Username Test: {username}</h5>
                      <h5>Password Test: {password}</h5>
-                 </Container>
+                 </Container> */}
                  
              </form>
          </div>

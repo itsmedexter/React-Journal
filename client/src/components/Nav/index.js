@@ -10,6 +10,7 @@ function Nav() {
                 ReMemory
             </a>
             {store.loading ? <a className="navbar-brand ml-auto">Loading...</a> : <></>}
+            <a className="navbar-brand" href="/">Logout</a>
         </nav>
     );
 }

@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <Container>
             <Row>
-                <Col size="md-4">
+                <Col size="md-8">
                     <CreateMemoryForm />
                     <MemoryList />
                 </Col>
