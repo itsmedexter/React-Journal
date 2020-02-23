@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
+import {useHistory} from 'react-router-dom';
+
 // import Home from "./Home";
 
 
-function Signup()
+function Signup({setUserId})
  {
      const [username, setUsername] = useState();
      const [password, setPassword] = useState();
+     const history = useHistory();
 
      const handleSubmit = e => {
          e.preventDefault();
@@ -16,10 +19,12 @@ function Signup()
              password: password
          };
 
-         API.saveUser(data) .then(results => {
+         API.saveUser(data).then(results => {
              console.log(results);
+             
+             setUserId(results._id)
              // what to do after user is created? 
-window.location.replace("/home")
+            history.push('/home');
          })
     
         //  console.log("username is " + username);

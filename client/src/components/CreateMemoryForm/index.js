@@ -6,7 +6,7 @@ import "./index.css";
 
 const tagsConfigInitialState = [{value: false, name: 'happy', label:'Happy'}, {value: false, name: 'funny', label:'Funny'}, {value: false, name: 'silly', label:'Silly'}, {value: false, name: 'terrible', label:'Terrible'}, {value: false, name: 'scary', label:'Scary'}]
 
-function CreateMemoryForm() {
+function CreateMemoryForm({userId}) {
     const [tagsConfig, setTagsConfig] = useState(tagsConfigInitialState);
     const bodyRef = useRef();
     const [state, dispatch] = useStoreContext();
@@ -21,7 +21,8 @@ function CreateMemoryForm() {
         .map(tag => tag.label).join(', ');
         API.saveMemory({
             main_content,
-            tag
+            tag,
+            userId
                 })
         .then(result => {
             dispatch({

@@ -22,21 +22,21 @@ module.exports = {
         db.User.create(req.body)
         .then(dbUser => res.json(dbUser))
         .catch(err => res.status(400).json(err));
-    },
-    // would it need a req, res? or just a join?
-    findOne: function(req, res) {
-        db.User.aggregate([
-            {
-                $lookup: 
-                {
-                   from: "Memory",
-                   localField: req.body,
-                   foreignField: "main_content",
-                   as: "memory"
-                }
-            }
-        ])
-        .then(dbMemory => res.json(dbMemory))
-        .catch(err => res.status(400).json(err));
     }
+    // would it need a req, res? or just a join?
+    // findOne: function(req, res) {
+    //     db.User.aggregate([
+    //         {
+    //             $lookup: 
+    //             {
+    //                from: "Memory",
+    //                localField: req.body,
+    //                foreignField: "main_content",
+    //                as: "memory"
+    //             }
+    //         }
+    //     ])
+    //     .then(dbMemory => res.json(dbMemory))
+    //     .catch(err => res.status(400).json(err));
+    // }
 };

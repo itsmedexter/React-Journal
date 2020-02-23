@@ -15,6 +15,10 @@ validate: [({ length }) => length >=6, "Password should be longer."] },
 image: { 
     type: String,
  },
+ memories: [{
+     type: Schema.Types.ObjectId,
+     required: false 
+ }]
 });
 // Id
 // Email

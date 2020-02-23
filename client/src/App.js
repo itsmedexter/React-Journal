@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -7,15 +7,20 @@ import { StoreProvider } from "./utils/GlobalState";
 import Nav from "./components/Nav";
 
 function App() {
+  const [userId, setUserId] = useState(undefined);
+  console.log(userId)
+  const setAdminId = id => setUserId(id);
   return (
+
     <Router>
       <div>
         <StoreProvider>
           <Nav />
           <div className="App">
             <Switch>
-              <Route exact path="/" component={Signup} />
-              <Route exact path="/home" component={Home} />
+            {/* // Checkout how setuserid is made. ID not showing */}
+              <Route exact path="/" component={() => <Signup setUserId={setAdminId} />} />
+              <Route exact path="/home" component={() => <Home userId={userId} />} />
             </Switch>
           </div>
         </StoreProvider>
@@ -26,3 +31,7 @@ function App() {
 
 
 export default App;
+
+
+
+// Checkout how setuserid is made.
