@@ -13,25 +13,30 @@ module.exports = {
         .catch(err => res.status(400).json(err));
     },
     create: function(req, res) {
+        console.log(req.body);
         //we will have to modify how body handled
         const {userId, ...memory} = req.body;
         console.log(userId, memory)
-        // isssue was creating a memory .create(memory), we want to request body 
-        db.Memory.create(req.body)
+        db.Memory.create(memory)
         .then(dbMemory => {
             console.log(dbMemory);
             //Now memory is saved we need to update the user
             //Reach out to user DB and update memories prop
-            db.User.updateOne({_id: userId},{$push:{memories: dbMemory._id}})
+            db.User.updateOne({_id: userId},{$push:{memory: memory._id}})
             .then(() => {
+                console.log(dbMemory);
                 res.sendStatus(200);
             })
             .catch(err => 
                 {
-                    res.json(err)
+                    res.json(err);
                 });
+                
         })
-        .catch(err => res.status(400).json(err));
+        .catch(err => {
+            res.status(400).json(err);
+            console.log(err);
+        })
     },
     findOne: function() {
         db.Memory.aggregate([

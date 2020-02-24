@@ -21,6 +21,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "if-env": "^1.0.4",
+    "local-storage": "^2.0.0",
     "mongoose": "5.9.1",
     "react-router-dom": "^5.1.2"
   }

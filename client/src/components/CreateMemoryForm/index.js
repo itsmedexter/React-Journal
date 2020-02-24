@@ -19,6 +19,9 @@ function CreateMemoryForm({userId}) {
             return tag.value;
         })
         .map(tag => tag.label).join(', ');
+        console.log(main_content);
+        console.log(tag);
+        console.log(userId);
         API.saveMemory({
             main_content,
             tag,
@@ -51,7 +54,7 @@ function CreateMemoryForm({userId}) {
             <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
                 <textarea className="form-control mb-2" required ref={bodyRef} placeholder="50 Characters or Less" rows="3" />
                 <div className="tag-container checkBox">
-                    <h4>Add a Tags</h4>
+                    <h4>Add a Tag</h4>
                     {tagsConfig.map(tag => {
                         return (
                             <>

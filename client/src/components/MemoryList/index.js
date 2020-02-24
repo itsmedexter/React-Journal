@@ -35,7 +35,7 @@ return (
                 {state.memory.map(memory => (
                     <ListItem key={memory._id}>
                         <strong>
-                            {memory._id + ": " + memory.main_content}
+                            {memory.date + ": " + memory.main_content}
                         </strong>
                         {" " + memory.tag }
                     </ListItem>

@@ -28,7 +28,7 @@ function SearchMemory() {
                 })
                 console.log(feeling);
                 setMemories(feeling);
-                // useState = {setMemories}
+                useState = {setMemories}
                 
             })
             .catch(err => console.log(err));
