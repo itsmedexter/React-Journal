@@ -22,9 +22,9 @@ module.exports = {
             console.log(dbMemory);
             //Now memory is saved we need to update the user
             //Reach out to user DB and update memories prop
-            db.User.updateOne({_id: userId},{$push:{memory: memory._id}})
-            .then(() => {
-                console.log(dbMemory);
+            db.User.updateOne({_id: userId},{$push:{memories: dbMemory._id}})
+            .then((response) => {
+                console.log('respone', response);
                 res.sendStatus(200);
             })
             .catch(err => 

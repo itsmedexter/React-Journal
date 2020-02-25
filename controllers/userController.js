@@ -13,10 +13,26 @@ module.exports = {
         .then(dbUser => res.json (dbUser))
         .catch(err => res.status (400).json(err));
     },
-    findById: function(req, res) {
-        db.User.findById(req.params.id)
-        .then(dbUser => res.json(dbUser))
-        .catch(err => res.status (400).json(err));
+    findById: async function(req, res) {
+        try {
+        const dbUser = await db.User.findById(req.params.id)
+            if(dbUser.memories.length === 0) {
+                res.json(dbUser);
+            }
+            const memories = [];
+            const memoryIds = dbUser.memories.concat();
+            while(memoryIds.length) {
+                const memoryId = memoryIds.pop();
+            const memoryresults = await db.Memory.findById( memoryId);
+            memories.push(memoryresults);
+            }
+            const {_id, email, password} = dbUser
+            res.json({_id, email, password, memories});
+        }
+        catch(err) {
+            res.sendStatus(400).json(err);
+        }
+    
     },
     create: function(req, res) {
         db.User.create(req.body)

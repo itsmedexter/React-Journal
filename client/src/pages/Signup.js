@@ -6,7 +6,7 @@ import "./Signup.css";
 // import Home from "./Home";
 
 
-function Signup({setUserId})
+function Signup(props)
  {
      const [username, setUsername] = useState();
      const [password, setPassword] = useState();
@@ -20,9 +20,10 @@ function Signup({setUserId})
          };
 
          API.saveUser(data).then(results => {
-             console.log(results);
+             console.log(props, results);
              
-             setUserId(results.data._id);
+             props.setUserId(results.data._id);
+             localStorage.setItem('temp', results.data._id)
              console.log(results.data._id);
              // what to do after user is created? 
             history.push('/home');
@@ -33,7 +34,7 @@ function Signup({setUserId})
         //  console.log("password is " + password);
      };
 
-// ComponentDidMount() {
+// getUser() {
 //     this.setUserId = JSON.parse(localStorage.setUserId("id"));
 
 //     if (localStorage.setUserId("id")) {

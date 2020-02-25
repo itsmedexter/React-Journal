@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -9,7 +9,20 @@ import Nav from "./components/Nav";
 function App() {
   const [userId, setUserId] = useState(undefined);
   console.log(userId)
-  const setAdminId = id => setUserId(id);
+  const setAdminId = id => {
+    console.log('YOU HIT THIS', id)
+    setUserId(id);
+  }
+
+  useEffect(() => {
+    const userId = localStorage.getItem('temp');
+    if(userId) {
+      setAdminId(userId)
+    }
+  }, []);
+
+
+
   return (
 
     <Router>
