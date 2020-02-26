@@ -23,10 +23,11 @@ function Signup(props)
              console.log(props, results);
              
              props.setUserId(results.data._id);
-             localStorage.setItem('temp', results.data._id)
+            //  localstoreage for user
+             localStorage.setItem("temp", results.data._id);
              console.log(results.data._id);
              // what to do after user is created? 
-            history.push('/home');
+            history.push("/home");
          })
         //  e.target.value = null;
     
@@ -48,7 +49,7 @@ function Signup(props)
          <div className="container-2">
          <div className="logincontainer">
              <div className="mt-4">
-                 <h4>Sign In</h4>
+                 <h4>New User Sign Up</h4>
              </div>
              <form onSubmit={handleSubmit}>
                  <Container className="mt-3 px-5">
@@ -77,7 +78,7 @@ function Signup(props)
                          </Col>
                      </Row>
                      <button className="btn enterbutton" type="submit">Enter</button><br />
-                     {/* <button className="btn btn-secondary mt-2" type="submit">Create New User</button> */}
+                     {/* <button className="btn createbutton" type="submit">Create New User</button> */}
 
                  </Container>
                  {/* <Container className="mt-4">
