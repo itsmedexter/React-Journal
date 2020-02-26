@@ -2,12 +2,16 @@ import axios from "axios";
 
 export default {
     // login user
-    loginUser: function() {
-        return axios.put("/api/user/login");
+    loginUser: function(userData2) {
+        return axios.put("/api/user/login", userData2);
     },
     // Gets all users
     getUser: function() {
         return axios.get("/api/user");
+    },
+    // Get one user info, wednesday
+    getUserById: function(id) {
+        return axios.get("/api/user/:userid")
     },
     // Saves user to database
     saveUser: function(userData) {
