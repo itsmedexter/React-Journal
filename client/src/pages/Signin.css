@@ -2,26 +2,27 @@
     font-family: 'Gochi Hand';
 } */
 
-.container-2 {
+.container-3 {
     position: fixed;
     top: 88px;
     left: 0;
     min-width: 100%;
     min-height: 100%;
     background-repeat: no-repeat;
-    background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/After_Dark_Flying_Toasters.png/300px-After_Dark_Flying_Toasters.png);
+    background-image: url(https://images.unsplash.com/photo-1498496294664-d9372eb521f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
     background-size: cover;
     overflow: hidden;
 }
 
-.logincontainer {
+.logincontainer2 {
     position: relative;
     margin: 100px auto;
     padding: 1px 20px 30px 20px;
     width: 360px;
     border-radius: 5px;
     color: white;
-    background-color: #17a2b8;
+    background-color: #1f9079;
+    /* background-color: #17a2b8; */
     box-shadow: 6px 6px lightgrey;
 }
 
@@ -35,6 +36,12 @@ h4 {
 }
 
 .enterbutton {
+    background-color: lightgray;
+    font-size: 1.25em;
+    color: darkslategrey;
+}
+
+.createbutton {
     background-color: lightgray;
     font-size: 1.25em;
     color: darkslategrey;

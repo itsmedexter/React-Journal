@@ -28,6 +28,7 @@ function CreateMemoryForm({userId}) {
             userId
                 })
         .then(result => {
+            console.log(result)
             dispatch({
                 type:ADD_MEMORY,
                 post: result.data

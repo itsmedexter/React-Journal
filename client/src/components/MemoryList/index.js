@@ -4,6 +4,9 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_MEMORY, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 import SearchMemory from "../SearchMemory";
+import moment from "moment";
+// How do list only loged in user's memories
+// How do I search for only tags and date?
 
 function MemoryList() {
     const [state, dispatch] = useStoreContext();
@@ -24,7 +27,7 @@ useEffect(() => {
     getMemory();
 }, []);
 
-
+    const currentDate = moment().format("MMMM Do YYYY");
 
 return (
     <div>
@@ -35,7 +38,7 @@ return (
                 {state.memory.map(memory => (
                     <ListItem key={memory._id}>
                         <strong>
-                            {memory.date + ": " + memory.main_content}
+                            {currentDate + ": " + memory.main_content}
                         </strong>
                         {" " + memory.tag }
                     </ListItem>

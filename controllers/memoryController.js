@@ -24,8 +24,10 @@ module.exports = {
             //Reach out to user DB and update memories prop
             db.User.updateOne({_id: userId},{$push:{memories: dbMemory._id}})
             .then((response) => {
-                console.log('respone', response);
+                console.log('response', response);
                 res.sendStatus(200);
+                res.json(response);
+                // send data back!!!!!!
             })
             .catch(err => 
                 {

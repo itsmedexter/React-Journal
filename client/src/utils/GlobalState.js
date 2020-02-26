@@ -2,6 +2,7 @@ import React, { createContext, useReducer, useContext } from "react";
 import {
     UPDATE_USER,
     ADD_USER,
+    GET_USER,
     ADD_MEMORY,
     UPDATE_MEMORY,
     LOADING
@@ -23,6 +24,13 @@ const reducer = (state, action) => {
         return {
             ...state,
             memory: [...action.memory],
+            loading: false
+        };
+// added for login page
+    case GET_USER:
+        return {
+            ...state,
+            user: [...action.user],
             loading: false
         };
 

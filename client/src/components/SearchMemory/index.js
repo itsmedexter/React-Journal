@@ -4,6 +4,7 @@ import { ListItem, List } from "../List";
 import Input from "../Input";
 import Button from "../Button";
 import MemoryList from "../MemoryList";
+import "./style.css"
 
 
 function SearchMemory() {
@@ -43,7 +44,7 @@ function SearchMemory() {
                         <Button
                             onClick={handleFormSubmit}
                             type="success"
-                            className="btn btn-info mt-2 mb-5">Search</Button>
+                            className="btn btn-info mt-2 mb-5 tagbtn">Search</Button>
 
 
         </div>

@@ -7,11 +7,19 @@ console.log('userController', userController)
 router.route("/")
 .get(userController.findAll)
 .post(userController.create)
+// added tuesday
+// .get(userController.findUserId)
+
 
 router.route("/login")
 .put(userController.login)
 
 router.route("/:id")
 .get(userController.findById)
+
+// added tuesday
+router.route("/:user")
+// .get(userController.findById)
+.post(userController.create)
 
 module.exports = router;
