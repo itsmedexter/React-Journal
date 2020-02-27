@@ -25,8 +25,7 @@ module.exports = {
             db.User.updateOne({_id: userId},{$push:{memories: dbMemory._id}})
             .then((response) => {
                 console.log('response', response);
-                res.sendStatus(200);
-                res.json(response);
+                res.json(dbMemory);
                 // send data back!!!!!!
             })
             .catch(err => 

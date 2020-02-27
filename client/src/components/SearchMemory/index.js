@@ -7,7 +7,7 @@ import MemoryList from "../MemoryList";
 import "./style.css"
 
 
-function SearchMemory() {
+function SearchMemory({setFilterText}) {
 
     const [memories, setMemories] = useState([]);
     const [memorySearch, setMemorySearch] = useState("");
@@ -19,20 +19,7 @@ function SearchMemory() {
 
     const handleFormSubmit = event => {
         event.preventDefault();
-        API.getMemory(memorySearch)
-            .then(res => { 
-                console.log(res.data);
-                const feeling = res.data.filter(mood => {
-                    console.log(mood.tag);
-                   return mood.tag == "Scary";
-                
-                })
-                console.log(feeling);
-                setMemories(feeling);
-                useState = {setMemories}
-                
-            })
-            .catch(err => console.log(err));
+        setFilterText(memorySearch);
     };
     return (
         <div>
