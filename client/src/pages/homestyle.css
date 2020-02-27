@@ -1,0 +1,18 @@
+.box1 {
+    margin: 0px;
+    padding: 20px 0px 0px 20px;
+    border: 1px darkolivegreen;
+    background-color: lightcyan;
+    width: 600px;
+}
+
+.box2{
+    min-width: 100%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../components/pictures/clouds.jpg");
+    /* background-image: url(https://images.unsplash.com/photo-1498496294664-d9372eb521f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80); */
+    background-size: cover;
+    overflow: hidden;
+
+}

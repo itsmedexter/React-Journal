@@ -55,7 +55,7 @@ function CreateMemoryForm({userId}) {
             <form className="form-group mt-3 mb-3" onSubmit={handleSubmit}>
                 <textarea className="form-control mb-2" required ref={bodyRef} placeholder="50 Characters or Less" rows="3" />
                 <div className="tag-container checkBox">
-                    <h4>Add a Tag</h4>
+                    <h5>Add a Tag</h5>
                     {tagsConfig.map(tag => {
                         return (
                             <>
