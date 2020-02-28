@@ -1,0 +1,51 @@
+/* body {
+    font-family: 'Gochi Hand';
+} */
+
+.container-3 {
+    position: fixed;
+    top: 88px;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../components/pictures/clouds.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.logincontainer2 {
+    position: relative;
+    margin: 100px auto;
+    padding: 1px 20px 30px 20px;
+    width: 360px;
+    border-radius: 5px;
+    color: white;
+    background-color: #1f9079;
+    /* background-color: #17a2b8; */
+    box-shadow: 6px 6px lightgrey;
+}
+
+
+.form-control {
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+.enterbutton {
+    background-color: lightgray;
+    font-size: 1.25em;
+    color: darkslategrey;
+}
+
+.createbutton {
+    background-color: lightgray;
+    font-size: 1.25em;
+    color: darkslategrey;
+}
+
+
+/* https://media0.giphy.com/media/26FeYWYuHV9ALTHMY/giphy.gif */
