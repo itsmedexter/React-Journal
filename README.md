@@ -2,17 +2,17 @@
 
 ![Click Here!](./pics/Project3_app.gif)
 
-In this assignment, I created a React journal that allows users to save memories and search for old memories by tags.
+In this project, I created a React journal that allows users to save memories and search for old memories by tags.
 
 ## Code Snippets
 
-![OMG](./pics/components.jpg)
+![OMG](./pics/memorycontroller.jpg)
 
-I styled it and wondered why is none of it was working. I kept looking at my components and the apps.js file for any errors. I looked at several classroom exercises that are similar, but the was no misspellings, import component problems. I searched through all the files that are related and couldn't find a thing.
+This is the Memory Controller code which shows the creates one memory and associates the memory to the user via "aggregate". Simply saying here is where I merge two separate tables together by ID. 
 
 ![OMG](./pics/user_story.png)
 
-Now I understand why the user story plays a big part in the development. The column, I want (feature), gives you a clue on where and what to start on first. If done correctly, it can help you give a path on creating a new app. 
+Now I understand why the user story plays a big part in the development. The column, I want (feature), gives you a clue on where and what to start on first. If done correctly, it can help create a path on creating a new app. 
 
 ## Getting Started
 
