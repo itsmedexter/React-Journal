@@ -25,6 +25,7 @@ To get started using the application, use any web browser to view live link, (ht
 * [Bootstrap](https://getbootstrap.com/)
 * [NodeJS](https://nodejs.org/en/)
 * [React](https://reactjs.org/)
+* [Mongo] (https://www.mongodb.com/)
 
 
 
