@@ -10,7 +10,7 @@ In this project, I created a React journal that allows users to save memories an
 
 This is the Memory Controller code which shows the creates one memory and associates the memory to the user via "aggregate". Simply saying here is where I merge two separate tables together by ID. 
 
-![OMG](./pics/user_story.png)
+![OMG](./pics/userstory.jpg)
 
 Now I understand why the user story plays a big part in the development. The column, I want (feature), gives you a clue on where and what to start on first. If done correctly, it can help create a path on creating a new app. 
 
